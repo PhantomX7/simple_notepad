@@ -138,9 +138,9 @@ public class FrmNotepadbyme extends javax.swing.JFrame {
             fchSave.showSaveDialog(this);
         }
         if(fchSave.getSelectedFile() != null){
-            String s1 = futil.openWriteFile(fchSave.getSelectedFile().getAbsolutePath());
-            String s2 = futil.addWriteRecord(txaText.getText());
-            String s3 = futil.closeWriteFile();
+            futil.openWriteFile(fchSave.getSelectedFile().getAbsolutePath());
+            futil.addWriteRecord(txaText.getText());
+            futil.closeWriteFile();
         }
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -158,13 +158,13 @@ public class FrmNotepadbyme extends javax.swing.JFrame {
         fchOpen.showOpenDialog(this);
         if (fchOpen.getSelectedFile() != null) {
             lblPath.setText(fchOpen.getSelectedFile().getAbsolutePath());
-            String s1 = futil.openReadFile(fchOpen.getSelectedFile().getAbsolutePath());
+            futil.openReadFile(fchOpen.getSelectedFile().getAbsolutePath());
             StringBuilder readLine = new StringBuilder();
             while (futil.getReadScanner().hasNext()) {
                 readLine.append(futil.getReadScanner().next() + "\n");
             }
             txaText.setText(readLine.toString());
-            String s3 = futil.closeReadFile();
+            futil.closeReadFile();
         }
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
