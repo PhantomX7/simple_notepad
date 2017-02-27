@@ -164,7 +164,7 @@ public class FrmNotepadbyme extends javax.swing.JFrame {
                 readLine.append(futil.getReadScanner().next() + "\n");
             }
             txaText.setText(readLine.toString());
-            futil.closeReadFile();
+            futil.closeReadFile(); 
         }
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
@@ -178,6 +178,7 @@ public class FrmNotepadbyme extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         txaText.setText("");
         fchSave.setSelectedFile(null);
+        lblPath.setText("");
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     @Override
